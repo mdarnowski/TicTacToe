@@ -17,10 +17,6 @@ SERVER
                     "MESSAGE Waiting for opponent...".
                     Two willing to compete players form a game ('TicTacToe').
 
-                    callGame()
-                        Sends information who starts the battle to the server by ' WELCOME + mark '. 'mark'
-                        ('X' or 'O') - char assigned by the TicTacToe class.
-
                 "LIST"
                     Server forms a list of logged in players(players with game and players without a game)
                     and packs information from this list to a String message.
