@@ -85,7 +85,7 @@ CLIENT
                 Move received by the server. Opponents turn.
             ENDING THE GAME COMMANDS
                 "VICTORY", "DEFEAT","TIE", "OTHER PLAYER LEFT" (--> TicTacToe)
-                    After receiving one of this commands, client sends message "RESTART" to server.
+                    After receiving one of this commands, client sends message "RESTART" to the server.
 
 
 HOW TO USE
