@@ -2,23 +2,28 @@ SERVER
 
     -->Player
     
-            Program checks users input to create new ServerSocket with the integer taken as a parameter that represents TCP port.
-            ServerSocket will listen for new clients over the network. If connection is established, program creates a new Player
+            Program checks users input to create a new ServerSocket
+            with the integer taken as a parameter that represents TCP port.
+            ServerSocket will listen for new clients over the network.
+            If connection is established, program creates a new Player
             and adds him to the ArrayList of 'players' (list of players without a game).
-
-        run()
+            
             --reacting to the commands from the client
 
                 "PLAY"
-                    Player ads himself to the que of players wanting to play and checks if there is another player willing to play with him.
-                    If there are no opponents available, player sends to the client: "MESSAGE Waiting for opponent...".
-                    Two willing to compete players form a game ('TicTacToe' - explained latter).
+                    Player ads himself to the que of players wanting to play
+                    and checks if there is another player willing to play with him.
+                    If there are no opponents available, player sends to the client:
+                    "MESSAGE Waiting for opponent...".
+                    Two willing to compete players form a game ('TicTacToe').
 
                     callGame()
-                        Sends information who starts the battle to the server by ' WELCOME + mark '. 'mark' ('X' or 'O') - char assigned by the TicTacToe class.
+                        Sends information who starts the battle to the server by ' WELCOME + mark '. 'mark'
+                        ('X' or 'O') - char assigned by the TicTacToe class.
 
                 "LIST"
-                    Server forms a list of logged in players(players with game and players without a game) and packs information from this list to a String message.
+                    Server forms a list of logged in players(players with game and players without a game)
+                    and packs information from this list to a String message.
                     Sends list with prefix "LIST IS".
 
                  "RESTART"
@@ -28,7 +33,8 @@ SERVER
                     Client logs out. Socket closes.
 
                  "MOVE" (tic-tac-toe playing)
-                    Client wants to move. Server checks if move is valid and sends the response to the client and to this opponent;
+                    Client wants to move. Server checks if move is valid
+                    and sends the response to the client and to this opponent;
 
 
             --sending to the client
@@ -60,7 +66,8 @@ CLIENT
 
     ->>Client
     
-        Program checks users input to create new Socket with the integer and String taken as a parameter(TCP port, server address).
+        Program checks users input to create a new Socket
+        with the integer and String taken as a parameter(TCP port, server address).
         Socket connects to server.
         Simple java swing implementation. Jtable holds current state of a game that client is playing.
 
